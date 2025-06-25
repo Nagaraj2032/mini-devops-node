@@ -13,15 +13,15 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Build Docker image
-      run: docker build -t mini-devops-app .
+      run: docker build -t mini-devops-node .
 
     - name: Log in to DockerHub
       uses: docker/login-action@v3
       with:
-        username: ${{ secrets.nagaraj2032 }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        username: ${{ secrets.Manic123 }}
+        password: ${{ secrets.Manic321 }}
 
     - name: Tag and push image
       run: |
-        docker tag mini-devops-app YOUR_DOCKERHUB_USERNAME/mini-devops-app
-        docker push YOUR_DOCKERHUB_USERNAME/mini-devops-app
+        docker tag mini-devops-node nagaraj2032/mini-devops-node
+        docker push nagaraj2032/mini-devops-node
